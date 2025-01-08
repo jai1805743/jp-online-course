@@ -179,6 +179,7 @@ h6{
 
     background-color:rgb(110, 114, 114);
     -webkit-text-size-adjust: 30%;
+    text-align:left;
 }
 h4{
     color: rgb(228, 228, 75);
