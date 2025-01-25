@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <style>
+        body{
+            -webkit-text-size-adjust: 80%;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; 
+            object-fit: cover;
+            z-index: -1; 
+        }
+
+    
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(135, 207, 235, 0.884);
+            width: 40%;
+            height: 50vh;
+            color: rgba(182, 7, 80, 0.801);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 30%;
+            margin-top: 10%;
+            border-radius: 14px;
+        }
+
+        h1 {
+            margin-top: 6%;
+        }
+
+    
+        @media screen and (max-width: 768px) {
+            .content {
+                width: 70%; 
+                margin-left: 15%; 
+                margin-top: 15%;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 1.8em; 
+                margin-top: 0; 
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .content {
+                width: 85%;
+                height: 25vh; 
+                margin-left: 10%;
+                margin-top: 70%; 
+                padding: 30px; 
+            }
+
+            h1 {
+                font-size: 1.8em; 
+                margin-top: 25px; 
+            }
+        }
+    
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video class="video-background" autoplay loop muted>
+        <source src="welcome video.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<br><br><br><br>
+    <!-- Content on top of the video -->
+    <div class="content">
+        <h1>Welcome to Pradeep's Website</h1>
+        <button class="btn btn-success"><a href="index.html"> Get Start </a></button>
+    </div>
+
+</body>
+</html>
