@@ -23,8 +23,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <form class="form-inline my-2  d-inline-flex pr-5 pt-1">
-                    <input class="form-control mr-sm-2 my-sm-0 ml-5 text-center" type="search" placeholder="Search" aria-label="Search" style="width: 200px;">
-                    <button class="btn btn-outline-success mr-sm-2 my-sm-0 ml-1" type="submit">Search</button>
+                    <input class="form-control mr-sm-2 my-sm-0 ml-5 text-center" type="search"id="search-item" onkeyup="search()" placeholder="Search" aria-label="Search" style="width: 200px;">
+                    <button class="btn btn-outline-success mr-sm-2 my-sm-0 ml-1" type="submit" >Search</button>
                   </form> 
             <div class="collapse navbar-collapse" id="navbarID">
                 <div class="navbar-nav ml-auto">
@@ -88,7 +88,7 @@
         <p class="text-center" style="color:rgb(232, 232, 110); font-size: 28px;">With the world's largest web developer site.</p>
         
         <form class="form-inline d-flex justify-content-center mt-3">
-            <input class="form-control my-2 text-center" type="search" placeholder="Search our course, e.g. HTML" aria-label="Search" style="width: 270px; border-color: black;">
+            <input class="form-control my-2 text-center" type="search"  placeholder="Search our course, e.g. HTML"id="search-item" onkeyup="search()" aria-label="Search" style="width: 270px; border-color: black;">
             <button class="btn btn-success my-2 ml-2" type="submit" style="border-radius: 15px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="16" f    ill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
@@ -98,7 +98,8 @@
     </div>
     <!--first content end-->
     <!--second content start-->
-    <div class="container-fluid  py-5 mt-5" style="background-color: lightgreen;">
+    <div class="product-list" id="product-list"></div>
+    <div class="container-fluid  py-5 mt-5 product" style="background-color: lightgreen;">
         
         <div class="text-center">
             <strong class="d-block display-3" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">HTML</strong><br>
@@ -115,7 +116,7 @@
     </div>
     <!--second content end-->
     <!--third content start-->
-    <div class="container-fluid" style="background-color:rgb(245, 245, 173);">
+    <div class="container-fluid product" style="background-color:rgb(245, 245, 173);">
         <div class="text-center">
             <strong class="d-block display-3" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">CSS</strong><br>
             <p class="h4">The language for Styling web pages</p><br>
@@ -135,7 +136,7 @@
     
     
     
-    <div class="container-fluid" style="background-color:rgb(212, 217, 219);">
+    <div class="container-fluid product" style="background-color:rgb(212, 217, 219);">
         <div class="text-center">
             <strong class="d-block display-3" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">JAVASCIPT</strong><br>
             <p class="h4">The language for Programming web pages</p><br>
@@ -152,7 +153,7 @@
     </div>
     <!--fourth content end-->
     <!--fiveth content start-->
-    <div class="container-fluid" style="background-color:rgb(196, 227, 245);">
+    <div class="container-fluid product" style="background-color:rgb(196, 227, 245);">
         <div class="text-center">
             <strong class="d-block display-3" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">PYTHON</strong><br>
             <p class="h4">A Popular Programming Language</p><br>
@@ -169,7 +170,7 @@
     </div>
     <!--fiveth content end-->
     <!--sixth content start-->
-    <div class="container-fluid" style="background-color:rgb(161, 252, 244);">
+    <div class="container-fluid product" style="background-color:rgb(161, 252, 244);">
         <div class="text-center">
             <strong class="d-block display-3" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">SQL</strong><br>
             <p class="h4">A Language access for database</p><br>
@@ -189,7 +190,7 @@
     <!--sixth content end-->
 
     <!--main content start-->
-    <div class="container-five bg-dark pl-2">
+    <div class="container-five bg-dark pl-2 product">
         <div class="row pt-4 ml-3">
             <div class="col-md-4 col-sm-12 mb-4">
                 <div class="first-sm">
@@ -199,7 +200,7 @@
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
+            <div class="col-md-4 col-sm-12 mb-4 product">
                 <div class="third-sm">
                     <strong>JAVA</strong><br>
                     <h6>A programming language</h6><br>
@@ -207,7 +208,7 @@
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
+            <div class="col-md-4 col-sm-12 mb-4 product">
                 <div class="fouth-sm">
                     <strong>C++</strong><br>
                     <h6>A programming language</h6><br>
@@ -219,26 +220,26 @@
     
 <!---->
     <!--card-->
-    <div class="container-six bg-dark pl-2">
+    <div class="container-six bg-dark pl-2 ">
         <div class="row pt-4 ml-3">
             <div class="col-md-4 col-sm-12 mb-4">
-                <div class="five-sm">
+                <div class="five-sm product ">
                     <strong>React</strong><br>
                     <h6>React is a JavaScript library </h6><br>
                     <button type="button" class="btn btn-primary mb-3 btn2">Learn React</button><br>
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="six-sm">
+            <div class="col-md-4 col-sm-12 mb-4 ">
+                <div class="six-sm product">
                     <strong>Node Js</strong><br>
                     <h6>Node Js is a back-end server side </h6><br>
                     <button type="button" class="btn btn-primary mb-3 btn2">Learn JAVA</button><br>
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="seven-sm">
+            <div class="col-md-4 col-sm-12 mb-4 ">
+                <div class="seven-sm product">
                     <strong>JQuery</strong><br>
                     <h6>A JS library for developing web pages</h6><br>
                     <button type="button" class="btn btn-primary mb-3 btn2">Learn JQuery</button><br>
@@ -250,21 +251,21 @@
     <div class="container-seven  pl-2">
         <div class="row pt-4 ml-3">
             <div class="col-md-4 col-sm-12 mb-4">
-                <div class="eight-sm">
+                <div class="eight-sm product">
                     <strong>XML</strong><br>
                   
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="nine-sm">
+            <div class="col-md-4 col-sm-12 mb-4 ">
+                <div class="nine-sm product">
                     <strong>C#</strong><br>
                    
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="ten-sm">
+            <div class="col-md-4 col-sm-12 mb-4 ">
+                <div class="ten-sm product">
                     <strong>Excel</strong><br>
                   
                 </div>
@@ -273,24 +274,24 @@
         </div>
     </div>
     <!---Container seven end-->
-    <div class="container-eight  pl-2">
+    <div class="container-eight  pl-2 product">
         <div class="row pt-4 ml-3">
             <div class="col-md-4 col-sm-12 mb-4">
-                <div class="eleven-sm">
+                <div class="eleven-sm product">
                     <strong>R</strong><br>
                   
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="twelve-sm">
+            <div class="col-md-4 col-sm-12 mb-4 product">
+                <div class="twelve-sm product">
                     <strong>Bootstrap</strong><br>
                    
                 </div>
             </div>
     
-            <div class="col-md-4 col-sm-12 mb-4">
-                <div class="thirteen-sm">
+            <div class="col-md-4 col-sm-12 mb-4 product">
+                <div class="thirteen-sm product">
                     <strong>Mysql</strong><br>
                   
                 </div>
@@ -298,6 +299,8 @@
             
         </div>
     </div>
+    
+</div>
     <!--eight container end-->
     <div class="container-eight  pl-2" style="background-color:rgba(178, 178, 178, 0.729)">
         <div class="row pt-4 ml-3">
@@ -353,6 +356,31 @@
     @ Developed By Jaipradeep
 </div>
 </div>
+
+
+
+<script>
+    const search = () => {
+      const searchbox = document.getElementById("search-item").value.toUpperCase();
+      const storeitems = document.getElementById("product-list");
+      const product = document.querySelectorAll(".product");
+      
+      for (let i = 0; i < product.length; i++) {
+        let match = product[i].getElementsByTagName('strong')[0];
+    
+        if (match) {
+          let textvalue = match.textContent || match.innerHTML;
+    
+          if (textvalue.toUpperCase().indexOf(searchbox) > -1) {
+            product[i].style.display = "";
+          } else {
+            product[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
  
 </body>
-</html>
+  </html>
+  
